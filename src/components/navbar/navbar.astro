@@ -1,24 +1,19 @@
 ---
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Proyectos",
-    path: "/proyectos",
+    title: "Acerca de",
+    path: "/about",
   },
   {
     title: "Precio",
-    path: "/precio",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
+    path: "/pricing",
   },
   {
     title: "Contacto",
-    path: "/contacto",
+    path: "/contact",
   },
 ];
 ---
@@ -39,7 +34,7 @@ const menuitems = [
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
-            menuitems.map((item, index) => (
+            menuitems.map((item) => (
               <li>
                 <a
                   href={item.path}
@@ -50,17 +45,7 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Inicia sesión</Link>
-          <Link href="#" size="md" block>Regístrate</Link>
-        </div>
       </MenuItems>
     </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Inicia sesión</a>
-        <Link href="#" size="md">Regístrate</Link>
-      </div>
-    </div>
   </header>
 </Container>

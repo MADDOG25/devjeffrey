@@ -6,58 +6,52 @@ import PricingCard from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
+    name: "Básico",
+    price: {
+      monthly: "$50",
+    },
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "5 secciones de páginas",
+      "Diseño básico",
+      "Integraciónes básicas",
+      "Soporte estándar",
     ],
     button: {
-      text: "Get Started",
+      text: "Empezar",
       link: "/",
     },
   },
   {
-    name: "Startup",
+    name: "Comercial",
     price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
+      monthly: "$100",
+      
     },
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "10 páginas de sitio web",
+      "Diseño avanzado",
+      "Integración SEO",
+      "Soporte correo electrónico",
     ],
     button: {
-      text: "Get Started",
+      text: "Empezar",
       link: "#",
     },
   },
   {
-    name: "Enterprise",
-    price: "Custom",
+    name: "Personalizado",
+    price: "A medida",
     popular: false,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "Sitio web comercial completo",
+      "Personalización premium",
+      "Seguridad SSL",
+      "Soporte 24/7",
     ],
     button: {
-      text: "Contact us",
+      text: "Contáctanos",
       link: "/contact",
     },
   },
@@ -67,11 +61,17 @@ const pricing = [
 <Layout title="Pricing">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Pricing</Fragment>
-      <Fragment slot="desc">
-        Simple & Predictable pricing. No Surprises.
-      </Fragment>
+      <Fragment slot="title">Precios</Fragment>
+      <Fragment slot="desc"> Accesibilidad y Transparencia </Fragment>
     </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <p class="text-md leading-relaxed text-slate-500">
+        Ofrecemos una variedad de planes diseñados para adaptarse a tus
+        necesidades específicas, ya seas un emprendedor individual o una empresa
+        en crecimiento.
+      </p>
+    </div>
 
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
       {pricing.map((item) => <PricingCard plan={item} />)}
