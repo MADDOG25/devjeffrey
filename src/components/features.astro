@@ -4,55 +4,54 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Personalización Avanzada",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
-  },
-  {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      "Desde la selección de colores hasta la disposición de elementos, cada detalle de tu página web será completamente único y reflejará tu estilo personal o de marca.",
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "On-Demand Components",
+    title: "Optimización para Motores de Búsqueda SEO",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
-  },
-  {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      "Aumenta tu visibilidad en línea con nuestras poderosas herramientas de SEO integradas. Optimiza fácilmente el contenido, las etiquetas meta y otros aspectos clave de tu sitio web para asegurarte de que estés en la cima de los resultados de búsqueda relevantes.",
     icon: "bx:bxs-file-find",
   },
   {
-    title: "Community",
+    title: "Seguridad Reforzada",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Protege tu sitio web y la información de tus clientes con nuestras medidas de seguridad de última generación. Desde encriptación SSL hasta detección de malware en tiempo real, puedes tener la tranquilidad de saber que tu presencia en línea está completamente segura.",
+    icon: "bx:bxs-lock",
+  },
+  {
+    title: "Diseños Responsivos",
+    description:
+      "No importa cómo accedan tus visitantes a tu sitio web, ya sea desde una computadora de escritorio, una tableta o un teléfono móvil, nuestros diseños responsivos garantizan una experiencia perfecta en todos los dispositivos.",
+    icon: "bx:bxs-mobile",
+  },
+  {
+    title: "Integración con Redes Sociales",
+    description:
+      "Amplifica tu alcance y conecta con tu audiencia en todas partes gracias a nuestra integración perfecta con las principales plataformas de redes sociales. Comparte contenido fácilmente, interactúa con tus seguidores y haz crecer tu comunidad en línea.",
+    icon: "bx:bxs-face",
+  },
+  {
+    title: "Análisis y Estadísticas Detalladas",
+    description:
+      "Obtén una comprensión profunda del rendimiento de tu sitio web con nuestras herramientas de análisis y estadísticas detalladas. Desde el seguimiento de tráfico hasta la identificación de patrones de comportamiento del usuario, te proporcionamos los datos que necesitas para tomar decisiones informadas y mejorar continuamente.",
+    icon: "bx:bxs-search",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Todo lo que necesitas para tu negocio
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Nuestros diseños elegantes y personalizables te ayudarán a destacar en un mercado saturado, mientras que nuestras funciones avanzadas garantizan una experiencia de usuario excepcional en cualquier dispositivo.
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid sm:grid-cols-1 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
