@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import PricingCard from "@components/pricing.astro";
+import PricingCard from "@components/services.astro";
 
 const pricing = [
   {
@@ -12,13 +12,15 @@ const pricing = [
     },
     popular: false,
     features: [
-      "5 Secciones de Páginas",
+      "Landing Page",
       "Diseño Básico",
       "Integraciones Básicas",
+      "SEO Básicas",
+      "2-3 semanas",
       "Soporte Estándar",
     ],
     button: {
-      text: "Empezar",
+      text: "Solicitar",
       link: "https://calendly.com/mdog1525/nexgendigital-asesoria",
     },
   },
@@ -33,9 +35,11 @@ const pricing = [
       "Diseño avanzado",
       "Integración SEO",
       "Soporte Correo Electrónico",
+      "3-4 semanas",
+      "Hosting y Dominio"
     ],
     button: {
-      text: "Empezar",
+      text: "Solicitar",
       link: "/contact",
     },
   },
@@ -44,9 +48,11 @@ const pricing = [
     price: "A medida",
     popular: false,
     features: [
-      "Sitio Web Completo",
+      "Sitio Web Personalizado",
       "Personalización Premium",
-      "Seguridad SSL",
+      "SEO Avanzado",
+      "Hosting y Dominio",
+      "4-6 semanas",
       "Soporte 24/7",
     ],
     button: {
@@ -57,17 +63,17 @@ const pricing = [
 ];
 ---
 
-<Layout title="Pricing">
+<Layout title="Servicios">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Precios</Fragment>
-      <Fragment slot="desc"> Accesibilidad y Transparencia </Fragment>
+      <Fragment slot="title">Servicios</Fragment>
+      <Fragment slot="desc"> Proporcionamos soluciones web para cualquier tipo de clientes y mercados.</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <p class="text-md leading-relaxed text-slate-500">
         Ofrecemos una variedad de planes diseñados para adaptarse a tus
-        necesidades específicas, ya seas un emprendedor individual o una empresa
+        necesidades específicas, ya seas un emprendedor independiente o una empresa
         en crecimiento.
       </p>
     </div>

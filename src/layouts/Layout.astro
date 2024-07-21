@@ -1,7 +1,7 @@
 ---
 import { SEO } from "astro-seo";
-import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
+import Footer from "@components/footer.astro";
 import "@fontsource-variable/inter/index.css";
 
 export interface Props {
@@ -29,7 +29,7 @@ const makeTitle = title;
     <meta name="generator" content={Astro.generator} />
     <SEO
       title={makeTitle}
-      description="NexGen Digital es un sitio web de marketing para ofrecer servicios"
+      description="Morgan Web Solutions - ofrecemos servicios de creación de diseño web, desarrollo de páginas web, optimizacion SEO y mantenimiento de sitios web"
       canonical={canonicalURL}
       twitter={{
         creator: "@DevJeffrey",
@@ -40,11 +40,11 @@ const makeTitle = title;
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `NexGen Digital Sitio web`,
+          title: `Morgan Web Solutions`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "NexGen Digital Homepage Screenshot",
+          alt: "Morgan Web Solutions Homepage Screenshot",
         },
       }}
     />
