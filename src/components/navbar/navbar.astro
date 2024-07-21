@@ -4,12 +4,20 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Acerca de",
-    path: "/about",
+    title: "Inicio",
+    path: "/",
   },
   {
-    title: "Precio",
-    path: "/pricing",
+    title: "Portafolio",
+    path: "/portfolio",
+  },
+  {
+    title: "Servicios",
+    path: "/services",
+  },
+  {
+    title: "Acerca de",
+    path: "/about",
   },
   {
     title: "Contacto",
@@ -23,12 +31,13 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">NexGen</span><span
-            class="text-slate-500"> Digital</span
+          ><span class="font-bold text-slate-800">Morgan</span><span
+            class="text-slate-500">
+            Web Solutions</span
           >
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon class="w-8 h-8 text-gray-800" />
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
@@ -38,7 +47,7 @@ const menuitems = [
               <li>
                 <a
                   href={item.path}
-                  class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                  class="flex lg:px-3 py-2 font-medium items-center text-gray-600 hover:text-gray-900">
                   <span> {item.title}</span>
                 </a>
               </li>

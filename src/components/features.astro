@@ -10,7 +10,13 @@ const features = [
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "Optimización para Motores de Búsqueda SEO",
+    title: "Diseños Responsivos",
+    description:
+      "No importa cómo accedan tus visitantes a tu sitio web, ya sea desde una computadora de escritorio, una tableta o un teléfono móvil, nuestros diseños responsivos garantizan una experiencia perfecta en todos los dispositivos.",
+    icon: "bx:bxs-mobile",
+  },
+  {
+    title: "Optimización SEO",
     description:
       "Aumenta tu visibilidad en línea con nuestras poderosas herramientas de SEO integradas. Optimiza fácilmente el contenido, las etiquetas meta y otros aspectos clave de tu sitio web para asegurarte de que estés en la cima de los resultados de búsqueda relevantes.",
     icon: "bx:bxs-file-find",
@@ -21,12 +27,7 @@ const features = [
       "Protege tu sitio web y la información de tus clientes con nuestras medidas de seguridad de última generación. Desde encriptación SSL hasta detección de malware en tiempo real, puedes tener la tranquilidad de saber que tu presencia en línea está completamente segura.",
     icon: "bx:bxs-lock",
   },
-  {
-    title: "Diseños Responsivos",
-    description:
-      "No importa cómo accedan tus visitantes a tu sitio web, ya sea desde una computadora de escritorio, una tableta o un teléfono móvil, nuestros diseños responsivos garantizan una experiencia perfecta en todos los dispositivos.",
-    icon: "bx:bxs-mobile",
-  },
+  
   {
     title: "Integración con Redes Sociales",
     description:
@@ -42,25 +43,25 @@ const features = [
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Todo lo que necesitas para tu negocio
+<div class="place-items-center mt-24">
+  <h2 class="text-4xl lg:text-5xl font-bold">
+    Beneficios que obtendrás con nosotros
   </h2>
   <p class="text-lg mt-4 text-slate-600">
     Nuestros diseños elegantes y personalizables te ayudarán a destacar en un mercado saturado, mientras que nuestras funciones avanzadas garantizan una experiencia de usuario excepcional en cualquier dispositivo.
   </p>
 </div>
 
-<div class="grid sm:grid-cols-1 md:grid-cols-3 mt-16 gap-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class="font-semibold text-lg">{item.title}</h3>
+          <p class="text-slate-500 mt-2">{item.description}</p>
         </div>
       </div>
     ))
