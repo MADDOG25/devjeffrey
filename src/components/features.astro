@@ -5,39 +5,27 @@ import { Icon } from "astro-icon";
 const features = [
   {
     title: "Personalización Avanzada",
-    description:
-      "Desde la selección de colores hasta la disposición de elementos, cada detalle de tu página web será completamente único y reflejará tu estilo personal o de marca.",
     icon: "bx:bxs-window-alt",
   },
   {
     title: "Diseños Responsivos",
-    description:
-      "No importa cómo accedan tus visitantes a tu sitio web, ya sea desde una computadora de escritorio, una tableta o un teléfono móvil, nuestros diseños responsivos garantizan una experiencia perfecta en todos los dispositivos.",
     icon: "bx:bxs-mobile",
   },
   {
     title: "Optimización SEO",
-    description:
-      "Aumenta tu visibilidad en línea con nuestras poderosas herramientas de SEO integradas. Optimiza fácilmente el contenido, las etiquetas meta y otros aspectos clave de tu sitio web para asegurarte de que estés en la cima de los resultados de búsqueda relevantes.",
     icon: "bx:bxs-file-find",
   },
   {
     title: "Seguridad Reforzada",
-    description:
-      "Protege tu sitio web y la información de tus clientes con nuestras medidas de seguridad de última generación. Desde encriptación SSL hasta detección de malware en tiempo real, puedes tener la tranquilidad de saber que tu presencia en línea está completamente segura.",
     icon: "bx:bxs-lock",
   },
-  
+
   {
     title: "Integración con Redes Sociales",
-    description:
-      "Amplifica tu alcance y conecta con tu audiencia en todas partes gracias a nuestra integración perfecta con las principales plataformas de redes sociales. Comparte contenido fácilmente, interactúa con tus seguidores y haz crecer tu comunidad en línea.",
     icon: "bx:bxs-face",
   },
   {
     title: "Análisis y Estadísticas Detalladas",
-    description:
-      "Obtén una comprensión profunda del rendimiento de tu sitio web con nuestras herramientas de análisis y estadísticas detalladas. Desde el seguimiento de tráfico hasta la identificación de patrones de comportamiento del usuario, te proporcionamos los datos que necesitas para tomar decisiones informadas y mejorar continuamente.",
     icon: "bx:bxs-search",
   },
 ];
@@ -47,21 +35,22 @@ const features = [
   <h2 class="text-4xl lg:text-5xl font-bold">
     Beneficios que obtendrás con nosotros
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Nuestros diseños elegantes y personalizables te ayudarán a destacar en un mercado saturado, mientras que nuestras funciones avanzadas garantizan una experiencia de usuario excepcional en cualquier dispositivo.
+  <p class="text-lg mt-4 font-normal text-slate-600">
+    Nuestro desarrollo web elegante y personalizable te ayudarán a destacar en
+    un mercado saturado, mientras que nuestras funciones avanzadas garantizan
+    una experiencia de usuario excepcional en cualquier dispositivo.
   </p>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+      <div class="flex flex-col gap-4 items-center justify-center">
+        <div class="mt-1 bg-black rounded-full p-2 w-20 h-20 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>
-          <p class="text-slate-500 mt-2">{item.description}</p>
+          <h3 class="font-medium text-xl text-center">{item.title}</h3>
         </div>
       </div>
     ))

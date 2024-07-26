@@ -16,7 +16,7 @@ const menuitems = [
     path: "/services",
   },
   {
-    title: "Acerca de",
+    title: "Sobre nosotros",
     path: "/about",
   },
   {
@@ -30,17 +30,17 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Morgan</span><span
-            class="text-slate-500">
-            Web Solutions</span
+        <a href="/" class="text-lg flex items-center justify-center">
+          <img src="/favicon.svg" class="w-8 h-8 pr-1" alt="Logo de DevJeffrey" />
+          <span class="font-bold text-slate-800 text-xl">Dev</span><span
+            class="text-slate-500 text-xl">Jeffrey</span
           >
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-8 h-8 text-gray-800" />
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+      <MenuItems class="hidden w-full lg:w-auto mt-6 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item) => (
