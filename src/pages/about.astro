@@ -1,6 +1,5 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "assets/hero-draw.png";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -9,20 +8,15 @@ import Sectionhead from "@components/sectionhead.astro";
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Acerca de</Fragment>
-      <Fragment slot="desc">Convertimos ideas en realidades.</Fragment>
+      <Fragment slot="title">Sobre nosotros</Fragment>
+      <Fragment slot="desc">Convertimos ideas en realidad.</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">¿Qué nos distingue?</h2>
       <p class="text-lg text-slate-500">
-        Nuestra dedicación a la excelencia. Desde la primera línea de código
-        hasta el lanzamiento final, nos esforzamos por superar tus expectativas
-        y ofrecerte resultados que te llenen de orgullo.
-      </p>
-      <p class="text-sm text-slate-400">
-        Además, nuestro equipo de soporte está siempre disponible para ayudarte
-        en cada paso del camino.
+        Nuestra dedicación a la excelencia. Nos esforzamos por superar tus
+        expectativas y ofrecerte resultados que te llenen de orgullo.
       </p>
     </div>
     <div
@@ -35,14 +29,144 @@ import Sectionhead from "@components/sectionhead.astro";
             sizes="(max-width: 400px) 100vw, 400px"
             width={400}
             height={300}
-            class="rounded-md transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+            class="rounded-md group:shadow-xl bg-white object-cover object-center aspect-square"
           />
         </div>
 
         <div class="mt-4 text-center grid gap-y-1">
           <h2 class="text-lg text-gray-800">Jeffrey Morgan</h2>
-          <h3 class="text-sm text-slate-500">Fundador/Desarrollador</h3>
+          <h3 class="text-sm text-slate-500">Fundador</h3>
           <h3 class="text-xs text-slate-400">Desarrollador Web Frontend</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">Preguntas y Respuestas</h2>
+      <div
+        id="accordion-flush"
+        data-accordion="collapse"
+        data-active-classes="bg-white text-gray-900"
+        data-inactive-classes="text-gray-500">
+        <h2 id="accordion-flush-heading-1">
+          <button
+            type="button"
+            class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+            data-accordion-target="#accordion-flush-body-1"
+            aria-expanded="true"
+            aria-controls="accordion-flush-body-1">
+            <span
+              >¿Qué servicios de desarrollo web ofreces y cómo pueden ayudar a
+              mi negocio a crecer?</span
+            >
+            <svg
+              data-accordion-icon
+              class="w-3 h-3 rotate-180 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5 5 1 1 5"></path>
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-flush-body-1"
+          class="hidden"
+          aria-labelledby="accordion-flush-heading-1">
+          <div class="py-5 border-b border-gray-200">
+            <p class="mb-2 text-gray-500">
+              Nuestra función es desarrollar en código el tipo de sitio web que
+              necesites para impulsar tu presencia digital y aumentar tus
+              clientes y ventas a lo largo del tiempo junto con un buen diseño y
+              personalización de acuerdo a tu marca personal o empresarial.
+            </p>
+          </div>
+        </div>
+        <h2 id="accordion-flush-heading-2">
+          <button
+            type="button"
+            class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+            data-accordion-target="#accordion-flush-body-2"
+            aria-expanded="false"
+            aria-controls="accordion-flush-body-2">
+            <span
+              >¿Qué diferencias hay entre un sitio web desarrollado por ti y uno
+              creado con una plantilla estándar?</span
+            >
+            <svg
+              data-accordion-icon
+              class="w-3 h-3 rotate-180 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5 5 1 1 5"></path>
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-flush-body-2"
+          class="hidden"
+          aria-labelledby="accordion-flush-heading-2">
+          <div class="py-5 border-b border-gray-200">
+            <p class="mb-2 text-gray-500">
+              Nos ponemos en el papel del usuario final y del cliente que
+              solicita el servicio, ya que así nos aseguramos que sea 100% a su
+              idea o deseo. En cambio, a los sitios web muy parecidos y poco
+              originales.
+            </p>
+          </div>
+        </div>
+        <h2 id="accordion-flush-heading-3">
+          <button
+            type="button"
+            class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 gap-3"
+            data-accordion-target="#accordion-flush-body-3"
+            aria-expanded="false"
+            aria-controls="accordion-flush-body-3">
+            <span
+              >¿Qué consejos darías a las pequeñas empresas que recién están
+              comenzando con su presencia en línea?</span
+            >
+            <svg
+              data-accordion-icon
+              class="w-3 h-3 rotate-180 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5 5 1 1 5"></path>
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-flush-body-3"
+          class="hidden"
+          aria-labelledby="accordion-flush-heading-3">
+          <div class="py-5 border-b border-gray-200">
+            <p class="mb-2 text-gray-500">
+              Están en la mejor época para mostrar al mundo lo que saben y
+              pueden ofrecer a los demás. Solo necesitan un gran empujón y
+              saltar a lo moderno y digital como lo es el internet y las redes
+              sociales. Compartan y ayuden a las personas.
+            </p>
+          </div>
         </div>
       </div>
     </div>
