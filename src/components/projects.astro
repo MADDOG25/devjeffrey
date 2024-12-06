@@ -1,111 +1,120 @@
+---
+export const projects = [
+  {
+    href: "https://www.teamjebus.com.ar/",
+    imgSrc: "/img/teamjebus.webp",
+    imgAlt: "proyecto web 1",
+    title: "Team Jebus Jiu-Jitsu",
+    description:
+      "Ofrece instrucción de Jiu-Jitsu Brasileño de alto nivel a la comunidad de Buenos Aires.",
+    techStack: "Reactjs - Tailwind",
+  },
+  {
+    href: "https://calbamerica.vercel.app/",
+    imgSrc: "/img/calbamerica.webp",
+    imgAlt: "proyecto web 2",
+    title: "Calbamerica Cámara de Litio",
+    description:
+      "Impulsar el desarrollo de la primera criptomoneda del litio con reservas a nivel mundial atomico3.",
+    techStack: "Reactjs - Tailwind",
+  },
+  {
+    href: "https://mistery-movie.vercel.app/",
+    imgSrc: "/img/misterymovie.webp",
+    imgAlt: "proyecto web 3",
+    title: "Mistery Movie",
+    description:
+      "Las mejores películas en tendencia y mejor valoradas de todos los tiempos.",
+    techStack: "Reactjs - React Router Dom - Tailwind - API",
+  },
+  {
+    href: "https://www.dl-arthaus.com/",
+    imgSrc: "/img/arthaus.webp",
+    imgAlt: "proyecto web 4",
+    title: "Arthaus",
+    description: "Sito web sobre tatuajes, eventos y cuadros personalizados.",
+    techStack: "Reactjs - Tailwind - React Router Dom",
+  },
+  {
+    href: "https://left-the-matrix.netlify.app/",
+    imgSrc: "/img/lefthematrix.webp",
+    imgAlt: "proyecto web 5",
+    title: "Left The Matrix",
+    description:
+      "Sitio web acerca de recursos e informacion sobre desarrollo personal. ",
+    techStack: "HTML - CSS - JS",
+  },
+  {
+    href: "https://cutdate.netlify.app/",
+    imgSrc: "/img/cutdate.webp",
+    imgAlt: "proyecto web 6",
+    title: "Cutdate",
+    description: "Pagina web del mercado de la barberia para agendar citas",
+    techStack: "Reactjs - Tailwind",
+  },
+  {
+    href: "https://servicios247.netlify.app/",
+    imgSrc: "/img/servicios247.webp",
+    imgAlt: "proyecto web 7",
+    title: "Servicios 24/7",
+    description: "Pagina de aterrizaje para brindar soluciones tecnologicas",
+    techStack: "Reactjs - Tailwind UI",
+  },
+  {
+    href: "https://xmacros.netlify.app/",
+    imgSrc: "/img/xmacros.webp",
+    imgAlt: "proyecto web 8",
+    title: "X Macros",
+    description: "Pagina web que calcula los macronutrientes.",
+    techStack: "Nextjs - TypeScript",
+  },
+  {
+    href: "https://simpletasklists.netlify.app/",
+    imgSrc: "/img/simpletask.webp",
+    imgAlt: "proyecto web 9",
+    title: "Simple TaskList",
+    description:
+      "Pagina web donde podemos anotar tareas de manera simple y dinamica",
+    techStack: "Reactjs",
+  },
+];
+---
+
 <div class="grid grid-cols-1 gap-10 mx-auto max-w-2xl mt-16">
-  <div class="grid items-center">
-    <a
-      href="https://www.teamjebus.com.ar/"
-      target="_blank"
-      referrerpolicy="no-referrer"
-      class="p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100">
-      <div
-        class="relative mx-auto border-gray-900 bg-gray-900 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-        <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px]">
-          <img
-            src="/img/teamjebus.webp"
-            class="h-full w-full rounded-lg object-center"
-            alt="proyecto web 1"
-            loading="eager"
-          />
-        </div>
-      </div>
-      <div
-        class="relative mx-auto bg-gray-800 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
-        <div
-          class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-white">
-        </div>
-      </div>
+  {
+    projects.map((project) => (
+      <div class="grid items-center">
+        <a
+          href={project.href}
+          target="_blank"
+          referrerpolicy="no-referrer"
+          class="p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100">
+          <div class="relative mx-auto border-gray-900 bg-gray-900 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
+            <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px]">
+              <img
+                src={project.imgSrc}
+                class="h-full w-full rounded-lg object-center"
+                alt={project.imgAlt}
+                loading="eager"
+              />
+            </div>
+          </div>
+          <div class="relative mx-auto bg-gray-800 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
+            <div class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-white" />
+          </div>
 
-      <div class="flex flex-col justify-between p-4">
-        <h5 class="mb-2 text-2xl font-bold text-gray-900">
-          Team Jebus Jiu-Jitsu
-        </h5>
-        <p class="font-normal text-gray-700">
-          Ofrece instrucción de Jiu-Jitsu Brasileño de alto nivel a la comunidad
-          de Buenos Aires.
-          <br />
-          Desarrollado con React - Tailwind.
-        </p>
+          <div class="flex flex-col justify-between p-4">
+            <h5 class="mb-2 text-2xl font-bold text-gray-900">
+              {project.title}
+            </h5>
+            <p class="font-normal text-gray-700">
+              {project.description}
+              <br />
+              Desarrollado con <strong class="font-bold text-gray-800">{project.techStack}</strong>.
+            </p>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
-  <div class="grid items-center">
-    <a
-      href="https://calbamerica.vercel.app/"
-      target="_blank"
-      referrerpolicy="no-referrer"
-      class="p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100">
-      <div
-        class="relative mx-auto border-gray-900 bg-gray-900 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-        <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px]">
-          <img
-            src="/img/calbamerica.webp"
-            class="h-full w-full rounded-lg object-center"
-            alt="proyecto web 2"
-            loading="eager"
-          />
-        </div>
-      </div>
-      <div
-        class="relative mx-auto bg-gray-800 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
-        <div
-          class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-white">
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-between p-4">
-        <h5 class="mb-2 text-2xl font-bold text-gray-900">
-          Calbamerica Camara de Litio
-        </h5>
-        <p class="font-normal text-gray-700">
-          Impulsar el desarrollo de la primera criptomoneda del litio con
-          reservas a nivel mundial atomico3.
-          <br />
-          Desarrollado con React - Tailwind.
-        </p>
-      </div>
-    </a>
-  </div>
-  <div class="grid items-center">
-    <a
-      href="https://mistery-movie.vercel.app/"
-      target="_blank"
-      referrerpolicy="no-referrer"
-      class="p-6 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100">
-      <div
-        class="relative mx-auto border-gray-900 bg-gray-900 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
-        <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px]">
-          <img
-            src="/img/misterymovie.webp"
-            class="h-full w-full rounded-lg object-center"
-            alt="proyecto web 3"
-            loading="eager"
-          />
-        </div>
-      </div>
-      <div
-        class="relative mx-auto bg-gray-800 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]">
-        <div
-          class="absolute left-1/2 top-0 -translate-x-1/2 rounded-b-xl w-[56px] h-[5px] md:w-[96px] md:h-[8px] bg-white">
-        </div>
-      </div>
-
-      <div class="flex flex-col justify-between p-4">
-        <h5 class="mb-2 text-2xl font-bold text-gray-900">Mistery Movie</h5>
-        <p class="font-normal text-gray-700">
-          Las mejores peliculas en tendencia y mejor valoradas de todos los
-          tiempos.
-          <br />
-          Desarrollado con React - React Router Dom - Tailwind - API.
-        </p>
-      </div>
-    </a>
-  </div>
+    ))
+  }
 </div>
